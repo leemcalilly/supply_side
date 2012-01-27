@@ -19,7 +19,7 @@ describe "Pages" do
     end
     
     it "should link to the secret page" do
-      click_link("Secret")
+      click_link("Visit the secret page")
       current_path == "/secret"
     end
   end
