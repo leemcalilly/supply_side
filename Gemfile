@@ -22,3 +22,7 @@ group :test do
   gem 'launchy'
   gem 'rb-fsevent'
 end
+
+group :development do
+  gem 'growl'
+end
