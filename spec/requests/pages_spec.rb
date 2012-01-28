@@ -40,5 +40,10 @@ describe "Pages" do
     it "should have the right header" do
       page.should have_selector("h1", :text => "Secret")
     end
+    
+    it "should link back to the homepage" do
+      click_link("Return Home")
+      current_path == "/"
+    end
   end
 end
