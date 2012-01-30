@@ -4,6 +4,7 @@ gem 'rails', '3.2.1'
 gem 'jquery-rails'
 gem 'pg'
 gem 'heroku'
+gem 'sorcery'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
