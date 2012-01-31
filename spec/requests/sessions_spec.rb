@@ -18,6 +18,10 @@ describe "Sessions" do
     it "has the right header" do
        page.should have_selector("h1", :text => "Log In")
     end
+    
+    it "should have a remember me checkbox" do
+      page.should have_selector("label", :text => "Remember me")
+    end
   end 
   
 end

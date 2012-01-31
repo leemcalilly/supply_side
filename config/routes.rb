@@ -1,9 +1,14 @@
-SupplySide::Application.routes.draw do  
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"
-  resources :users
+SupplySide::Application.routes.draw do
+  
+  resources :password_resets   
   resources :sessions
-  get "secret" => "pages#secret", :as => "secret"
+  resources :users
+  
+  match "/logout" => "sessions#destroy"
+  match "/login" => "sessions#new"
+  match "/recover" => "password_resets#new"
+  match "/signup" => "users#new"
+  match "/secret" => "pages#secret"
+
   root :to => "pages#home"
 end
