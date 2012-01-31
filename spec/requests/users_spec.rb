@@ -18,6 +18,10 @@ describe "Users" do
     it "has the right header" do
        page.should have_selector("h1", :text => "Sign Up")
     end
+    
+    it "successfully signs up a new user" do
+      pending "need to add these steps"
+    end
   end 
   
 end
