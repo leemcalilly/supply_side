@@ -15,7 +15,7 @@ describe "Users" do
        page.should have_selector("title", :text => "Sign Up | Supply Side")
     end
     
-    it "has the right headline" do
+    it "has the right header" do
        page.should have_selector("h1", :text => "Sign Up")
     end
   end 
