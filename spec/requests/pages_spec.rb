@@ -26,6 +26,8 @@ describe "Pages" do
   
   describe "Secret" do
     before(:each) do 
+      user = Factory(:user)      
+      login_as user
       visit secret_path
     end
     

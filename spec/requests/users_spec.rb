@@ -20,8 +20,13 @@ describe "Users" do
     end
     
     it "successfully signs up a new user" do
-      pending "need to add these steps"
+      visit signup_path
+      fill_in "user_email", :with => "lee@example.com"
+      fill_in "Password", :with => "secret"
+      fill_in "Password confirmation", :with => "secret"
+      click_button "Sign Up"
+      current_path == "/"
+      page.should have_content("Signed up!")
     end
   end 
-  
 end
