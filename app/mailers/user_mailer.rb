@@ -8,6 +8,6 @@ class UserMailer < ActionMailer::Base
     @user = user
     @url  = "#{root_url}/password_resets/#{user.reset_password_token}/edit"
     mail(:to => user.email,
-         :subject => "Your password has been reset")
+         :subject => "Reset Your Password | Supply Side")
   end
 end
