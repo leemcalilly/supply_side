@@ -11,12 +11,6 @@ Notes
 
 * tests for models 
 
-* tests for the mailers
-
-* factory for logging in and then visiting the secret page
-
-* finish password reset test
-
 * test for signup failure and login failure
 
 
