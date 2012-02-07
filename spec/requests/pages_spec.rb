@@ -26,8 +26,11 @@ describe "Pages" do
   
   describe "Secret" do
     before(:each) do 
-      user = Factory(:user)      
-      login_as user
+      user = Factory(:user)
+      visit login_path
+      fill_in "Email", :with => "lee@example.com"
+      fill_in "Password", :with => "secret"
+      click_button "Log In"
       visit secret_path
     end
     
