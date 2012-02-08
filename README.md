@@ -9,8 +9,6 @@ Notes
 
 # Tests Needed
 
-* tests for models 
-
 * test for signup failure and login failure
 
 
