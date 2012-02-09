@@ -2,23 +2,11 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @user = Factory.build(:user)
+    @user = Factory.create(:user, :email => "test@example.com")
   end
    
   it "has a valid factory" do
     Factory(:user).should be_valid
-  end
-  
-  
-  describe "emails" do
-    it "should have an email address" do
-      @user.email.should_not == ""
-    end
-    
-    it "should reject duplicate email addresses" do
-      user_with_duplicate_email = Factory.build(:user, :email => "lee@example.com")
-      user_with_duplicate_email.should_not == @user.email
-    end
   end
   
   describe "passwords" do
