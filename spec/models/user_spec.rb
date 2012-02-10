@@ -22,4 +22,10 @@ describe User do
       @user.password_confirmation == @user.password
     end
   end
+  
+  describe "product associations" do
+    it "should have a product attribute" do
+      @user.should respond_to(:products)
+    end
+  end
 end

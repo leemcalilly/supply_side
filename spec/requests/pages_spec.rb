@@ -26,7 +26,7 @@ describe "Pages" do
   
   describe "Secret" do
     before(:each) do 
-      user = Factory(:user)
+      user = Factory(:user, :email => "lee@example.com")
       visit login_path
       fill_in "Email", :with => "lee@example.com"
       fill_in "Password", :with => "secret"

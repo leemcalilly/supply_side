@@ -4,6 +4,7 @@ describe "Sessions" do
   
   describe "Login" do
     before(:each) do
+      user = Factory(:user, :email => "lee@example.com")
       visit login_path
     end
     

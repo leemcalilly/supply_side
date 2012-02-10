@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email, :case_sensitive => false
   validates_format_of :email, :with => valid_email_regex
+  
+  has_many :products
 end
