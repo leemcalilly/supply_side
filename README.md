@@ -9,8 +9,7 @@ Notes
 
 # Tests Needed
 
-* test for signup failure and login failure
-
+* Tests for the product create process
 
 # New features
 
