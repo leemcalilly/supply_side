@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   before(:each) do
-    @user = Factory.create(:user, :email => "test@example.com")
+    @user = Factory(:user, :email => "test@example.com")
   end
    
   it "has a valid factory" do
