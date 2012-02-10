@@ -9,6 +9,8 @@ Notes
 
 # Tests Needed
 
+* Products should be deleted if the user is deleted: http://ruby.railstutorial.org/chapters/user-microposts#sec:dependent_destroy
+
 * Tests for the product create process
 
 # New features
