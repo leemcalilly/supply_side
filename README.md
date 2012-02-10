@@ -9,7 +9,7 @@ Notes
 
 # Tests Needed
 
-* Products should be deleted if the user is deleted: http://ruby.railstutorial.org/chapters/user-microposts#sec:dependent_destroy
+* Add product create to the view: http://ruby.railstutorial.org/chapters/user-microposts?version=3.2#sec:showing_microposts
 
 * Tests for the product create process
 
