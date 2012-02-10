@@ -24,8 +24,24 @@ describe User do
   end
   
   describe "product associations" do
+    before { @user.save }
+      let!(:older_product) do 
+        FactoryGirl.create(:product, user: @user, created_at: 1.day.ago)
+    end
+      let!(:newer_product) do
+        FactoryGirl.create(:product, user: @user, created_at: 1.hour.ago)
+    end
+    
     it "should have a product attribute" do
       @user.should respond_to(:products)
     end
-  end
+    
+    it "should destroy associated products" do
+      products = @user.products
+      @user.destroy
+      [older_product, newer_product].each do |product|
+        Product.find_by_id(product.id).should be_nil
+      end
+    end
+  end      
 end

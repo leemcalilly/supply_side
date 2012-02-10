@@ -28,5 +28,5 @@ describe "Users" do
       current_path == "/"
       page.should have_content("Signed up!")
     end
-  end 
+  end
 end
