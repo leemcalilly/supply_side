@@ -26,10 +26,10 @@ describe User do
   describe "product associations" do
     before { @user.save }
       let!(:older_product) do 
-        FactoryGirl.create(:product, user: @user, created_at: 1.day.ago)
+        Factory.create(:product, user: @user, created_at: 1.day.ago)
     end
       let!(:newer_product) do
-        FactoryGirl.create(:product, user: @user, created_at: 1.hour.ago)
+        Factory.create(:product, user: @user, created_at: 1.hour.ago)
     end
     
     it "should have a product attribute" do

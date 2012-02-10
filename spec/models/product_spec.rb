@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Product do 
   before(:each) do
     @user = Factory(:user)
-    product = Factory(:product)    
   end
 
   it "has a valid factory" do
@@ -11,7 +10,7 @@ describe Product do
   end
   
   it "should create a new instance given valid attributes" do
-    Product.create!(@product)
+    product = @user.products.create(@product)
   end
   
   describe "user associations" do
@@ -26,6 +25,16 @@ describe Product do
     it "should have the right associated user" do
       @product.user_id.should == @user.id
       @product.user.should == @user
+    end
+    
+    describe "when user_id is not present" do
+      Factory.build(:product, :user => nil)
+      it { should_not be_valid }
+     end
+
+    describe "when there is no name" do
+      Factory.build(:product, :name => " ")
+      it { should_not be_valid }
     end
   end
 end
